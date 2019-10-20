@@ -11,7 +11,7 @@ import datetime
 
 def search_orders(content):
     
-    txt = 'https://api.open.21ds.cn/apiv2/tbkorderdetailsget?apkey=794d154c-cac1-1524-5796-eba0265532ba&start_time=%s&end_time=%s&tbname=lfj870838406'%(content[2],content[3])
+    txt = 'https://api.open.21ds.cn/apiv2/tbkorderdetailsget?apkey=794d154c-cac1-1524-5796-eba0265532ba&start_time=%s&end_time=%s&tbname='%(content[2],content[3])
     return txt
 def Turn_orders_link(content):
     html = getHTMLText(search_orders(content))
@@ -23,7 +23,7 @@ def Turn_orders_link(content):
 def search_goods(keyword):
     adzoneid = '109442250042'
     siteid = '887200231'
-    tbname = 'lfj870838406'
+    tbname = ''
     sort = 'tk_total_commi_des'
     pagesize = '5'
     pageno = '1'
@@ -41,7 +41,7 @@ def Turn_goods_link(keyword):
 
 def sub_link(tpwdcode):
     txt_link = 'TAOLINK'
-    txt = 'https://api.open.21ds.cn/apiv2/getitemgyurlbytpwd?apkey=794d154c-cac1-1524-5796-eba0265532ba&tpwdcode=TAOLINK&pid=mm_503340173_887200231_109442250042&tbname=lfj870838406&shorturl=1&tpwd=1&tpwdpic&extsearch=1 '
+    txt = 'https://api.open.21ds.cn/apiv2/getitemgyurlbytpwd?apkey=794d154c-cac1-1524-5796-eba0265532ba&tpwdcode=TAOLINK&pid=mm_503340173_887200231_109442250042&tbname=&shorturl=1&tpwd=1&tpwdpic&extsearch=1 '
     op = re.sub(txt_link,tpwdcode, txt)
     return op
 
@@ -61,7 +61,7 @@ def goods(id):
     return op
 
 def goods_link(id):
-    txt = 'https://api.open.21ds.cn/apiv2/getitemgyurl?apkey=794d154c-cac1-1524-5796-eba0265532ba&itemid=%s&pid=mm_503340173_887200231_109442250042&tbname=lfj870838406&shorturl=1&tpwd=1'%(id)
+    txt = 'https://api.open.21ds.cn/apiv2/getitemgyurl?apkey=794d154c-cac1-1524-5796-eba0265532ba&itemid=%s&pid=mm_503340173_887200231_109442250042&tbname=&shorturl=1&tpwd=1'%(id)
     return txt
 def Turn_id_msg(id):
     html = getHTMLText(goods_link(id))
