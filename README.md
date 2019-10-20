@@ -14,5 +14,6 @@
 当与关注公众号时自动录入open_id
 ![Image text](https://github.com/Fzkin/-/blob/master/img-folder/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20191020202650.png)
 
+上传订单，确认收货后通过第三方支付宝返利
 ![Image text](https://github.com/Fzkin/-/blob/master/img-folder/%E5%BE%AE%E4%BF%A1%E5%9B%BE%E7%89%87_20191020202701.png)
 
